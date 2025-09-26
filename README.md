@@ -1,4 +1,9 @@
-# Portfolio Playground
+# SKKU-GenAI-Assignment1
+
+> Portfolio Playground
+
+
+성균관대학교 생성형딥러닝 Assignment1 입니다. Cursor를 통해 바이브 코딩하여 제작했습니다.
 
 키보드와 화면 버튼으로 캐릭터를 조작하여 포트폴리오 정보를 탐험하는 인터랙티브 사이트입니다.
 
