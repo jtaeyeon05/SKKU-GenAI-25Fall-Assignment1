@@ -1,4 +1,4 @@
-# SKKU-GenAI-Assignment1
+# SKKU-GenAI-25Fall-Assignment1
 
 > Portfolio Playground
 
