@@ -1,46 +1,32 @@
-# SKKU GenAI Assignment 1
+# Portfolio Playground
 
-성균관대학교 생성형 AI 과제 1번 프로젝트입니다.
+키보드와 화면 버튼으로 캐릭터를 조작하여 포트폴리오 정보를 탐험하는 인터랙티브 사이트입니다.
 
-## 프로젝트 개요
+## 사용법
+- 이동: 화살표 키 또는 WASD
+- 열기: Space 또는 Enter (가까운 핫스팟에 접근 시)
+- 닫기: Esc 또는 패널 바깥 클릭, 닫기 버튼
+- 모바일: 화면의 방향키/액션 버튼 사용
 
-이 프로젝트는 기본적인 웹페이지 구조를 가진 빈 웹페이지입니다.
+## 구조
+- `index.html`: 마크업과 패널/컨트롤 UI
+- `style.css`: 장면, 플레이어, 패널, 컨트롤 스타일
+- `script.js`: 움직임 로직, 근접 감지, 패널 열기/닫기
 
-## 파일 구조
+## 커스터마이즈
+- 핫스팟 위치: `index.html`의 `.hotspot` 요소 `style="left/top/right/bottom"` 속성 조정
+- 패널 내용: `script.js`의 `openPanel(kind)` 내 `contentByKind` 수정
+- 이동 속도: `script.js` 상단 `SPEED` 상수 (px/s)
 
+## 로컬 실행
+```bash
+cd /Users/jeongtaeyeon/ProjectHub/SKKU/SKKU-GenAI-Assignment1
+python3 -m http.server 5173
 ```
-SKKU-GenAI-Assignment1/
-├── index.html          # 메인 HTML 파일
-├── style.css           # CSS 스타일시트
-├── script.js           # JavaScript 파일
-├── .gitignore          # Git 무시 파일 목록
-└── README.md           # 프로젝트 설명서
-```
+브라우저에서 `http://localhost:5173` 접속
 
-## 기능
+## 배포
+정적 파일이므로 GitHub Pages, Netlify, Vercel 등으로 바로 배포 가능합니다.
 
-- **반응형 디자인**: 모바일과 데스크톱에서 모두 최적화된 화면
-- **모던한 UI**: 깔끔하고 현대적인 디자인
-- **인터랙티브 요소**: 헤더 클릭 및 호버 효과
-- **한국어 지원**: 완전한 한국어 설정
-
-## 사용 방법
-
-1. `index.html` 파일을 웹 브라우저에서 열기
-2. 또는 로컬 서버를 실행하여 접속
-
-## 기술 스택
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-
-## 개발자
-
-- **이름**: 정태연
-- **학번**: SKKU
-- **과목**: 생성형 AI
-
-## 라이선스
-
-이 프로젝트는 교육 목적으로 제작되었습니다.
+---
+© 2025 정태연

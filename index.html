@@ -1,26 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>빈 웹페이지</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfolio Playground</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>빈 웹페이지</h1>
-        </header>
-        
-        <main>
-            <p>이것은 빈 웹페이지입니다. 원하는 내용을 추가하세요.</p>
-        </main>
-        
-        <footer>
-            <p>&copy; 2024 빈 웹페이지</p>
-        </footer>
+  <div class="app">
+    <header class="topbar">
+      <h1 class="title">PORTFOLIO PLAYGROUND</h1>
+      <p class="hint">화살표/WASD로 이동 · 스페이스/Enter로 열기 · 모바일은 버튼 사용</p>
+    </header>
+
+    <main class="scene-wrapper">
+      <div id="scene" class="scene" aria-label="portfolio scene" role="application">
+        <div id="player" class="player" aria-label="player" tabindex="0"></div>
+
+        <!-- Hotspots -->
+        <button class="hotspot" data-panel="about" style="left: 10%; top: 20%;" aria-label="About">ABOUT</button>
+        <button class="hotspot" data-panel="projects" style="right: 12%; top: 48%;" aria-label="Projects">PROJECTS</button>
+        <button class="hotspot" data-panel="contact" style="left: 18%; bottom: 14%;" aria-label="Contact">CONTACT</button>
+      </div>
+    </main>
+
+    <!-- On-screen Controls -->
+    <div class="controls" aria-label="on-screen controls">
+      <div class="pad">
+        <button class="btn dir up" data-dir="up" aria-label="Up">▲</button>
+        <div class="middle-row">
+          <button class="btn dir left" data-dir="left" aria-label="Left">◀</button>
+          <button class="btn action" data-action="open" aria-label="Open">●</button>
+          <button class="btn dir right" data-dir="right" aria-label="Right">▶</button>
+        </div>
+        <button class="btn dir down" data-dir="down" aria-label="Down">▼</button>
+      </div>
     </div>
-    
-    <script src="script.js"></script>
+
+    <!-- Panels -->
+    <div id="panel-overlay" class="overlay" hidden>
+      <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title">
+        <header class="panel-header">
+          <h2 id="panel-title"></h2>
+          <button id="panel-close" class="panel-close" aria-label="닫기">✕</button>
+        </header>
+        <div id="panel-content" class="panel-content"></div>
+      </div>
+    </div>
+
+    <footer class="bottombar">
+      <small>© 2025 정태연. Built with vanilla JS.</small>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
+
+
