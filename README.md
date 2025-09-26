@@ -18,6 +18,9 @@
 - `style.css`: 장면, 플레이어, 패널, 컨트롤 스타일
 - `script.js`: 움직임 로직, 근접 감지, 패널 열기/닫기
 
+## 배포
+- 라이브 링크: https://jtaeyeon05.github.io/SKKU-GenAI-Assignment1/
+
 ## 커스터마이즈
 - 핫스팟 위치: `index.html`의 `.hotspot` 요소 `style="left/top/right/bottom"` 속성 조정
 - 패널 내용: `script.js`의 `openPanel(kind)` 내 `contentByKind` 수정
