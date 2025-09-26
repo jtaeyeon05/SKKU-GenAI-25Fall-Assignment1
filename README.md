@@ -18,15 +18,5 @@
 - 패널 내용: `script.js`의 `openPanel(kind)` 내 `contentByKind` 수정
 - 이동 속도: `script.js` 상단 `SPEED` 상수 (px/s)
 
-## 로컬 실행
-```bash
-cd /Users/jeongtaeyeon/ProjectHub/SKKU/SKKU-GenAI-Assignment1
-python3 -m http.server 5173
-```
-브라우저에서 `http://localhost:5173` 접속
-
-## 배포
-정적 파일이므로 GitHub Pages, Netlify, Vercel 등으로 바로 배포 가능합니다.
-
 ---
 © 2025 정태연

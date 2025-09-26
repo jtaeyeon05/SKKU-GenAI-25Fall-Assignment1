@@ -107,6 +107,24 @@ body {
   .controls { padding-top: 6px; }
 }
 
+/* Mobile adjustments: keep controls reachable */
+@media (max-width: 600px) {
+  .scene { height: 46vh; }
+  .controls {
+    position: fixed;
+    left: 0; right: 0;
+    bottom: 0;
+    z-index: 20;
+    padding: 10px calc(env(safe-area-inset-left, 0px) + 8px) calc(env(safe-area-inset-bottom, 0px) + 12px);
+    background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.2), transparent);
+    backdrop-filter: blur(6px);
+  }
+  .app { padding-bottom: 120px; }
+  .btn { width: 48px; height: 48px; font-size: 16px; border-radius: 12px; }
+  .pad { gap: 6px; }
+  .middle-row { gap: 6px; }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

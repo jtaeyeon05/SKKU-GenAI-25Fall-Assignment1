@@ -167,11 +167,13 @@
 
   async function fetchRepos(user) {
     try {
-      const res = await fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=12`);
+      const res = await fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=6`);
       if (!res.ok) throw new Error('GitHub API 오류');
       const data = await res.json();
       // simple mapping
-      return data.map(r => ({ name: r.name, html_url: r.html_url, description: r.description || '' }));
+      return data
+        .slice(0, 6)
+        .map(r => ({ name: r.name, html_url: r.html_url, description: r.description || '' }));
     } catch (e) {
       return [];
     }
